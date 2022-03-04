@@ -1,0 +1,26 @@
+FUNCTION dot_product(in n) : return prod
+VAR
+    prod:integer;
+BEGIN
+    prod:=0;
+    FOR i FROM 0 TO n-1 STEP 1  DO 
+        prod = prod +v1[i]*v2[i] ;
+    END_FOR
+END
+ALGORITHM dot_product 
+VAR
+    v1:ARRAY_OF integer[2];
+    v2:ARRAY_OF integer[2];
+    prod,n: integer;
+BEGIN
+    prod:=0;
+    n:=0;
+    read (v1);
+    read (v2);
+    prod:= dot_product(n,prod);
+    IF(prod=0)THEN
+        write("Vecteur 1 et vecteur 2 sont orthogonaux");
+    ELSE
+        write("Vecteur 1 et vecteur 2 ne sont Pas orthogonaux");
+    END_IF
+END
